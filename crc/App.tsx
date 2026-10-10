@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Sparkles, Folder, Code2, MessageSquare, Settings, CheckCircle, AlertTriangle } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<'generate' | 'projects' | 'code' | 'chat' | 'settings'>('settings');
@@ -235,6 +236,7 @@ export default function App() {
           <span>Settings</span>
         </button>
       </nav>
+      <Analytics />
     </div>
   );
 }
